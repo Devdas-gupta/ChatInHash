@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #575656; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #848f9a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.output {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+#encoded-hash,
+#decoded-text {
+    font-family: monospace;
+    color: #333;
+    max-width: 100%;
+}
+
+.copy-button,
+.paste-button {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.copy-button:hover,
+.paste-button:hover {
+    background-color: #5a6268;
+}
+
+.paste-button {
+    background-color: #28a745;
+}
+
+.paste-button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Encoder/Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Hash Encoder/Decoder</h1>
+        <p>Made by Devdas Kumar</p>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Encoder</h2>
+            <form id="encode-form">
+                <div class="form-group">
+                    <label for="text-input">Enter Text:</label>
+                    <input type="text" id="text-input" name="text-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="hash-type">Select Hash Type:</label>
+                    <select id="hash-type" name="hash-type">
+                        <option value="md5">MD5</option>
+                        <option value="sha1">SHA-1</option>
+                        <option value="sha256">SHA-256</option>
+                    </select>
+                </div>
+                <button type="button" class="btn" onclick="encodeText()">Encode</button>
+            </form>
+            <div id="encoded-output" class="output">
+                <p>Encoded Hash: <span id="encoded-hash"></span></p>
+                <button class="btn copy-button" onclick="copyToClipboard('encoded-hash')">Copy</button>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Decoder</h2>
+            <form id="decode-form">
+                <div class="form-group">
+                    <label for="hash-input">Enter Hash:</label>
+                    <input type="text" id="hash-input" name="hash-input" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn paste-button" type="button" onclick="pasteFromClipboard()">Paste Hash</button>
+                    <button type="button" class="btn" onclick="decodeHash()">Decode</button>
+                </div>
+            </form>
+            <div id="decoded-output" class="output">
+                <p>Decoded Text: <span id="decoded-text"></span></p>
+                <button class="btn copy-button" onclick="copyToClipboard('decoded-text')">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
